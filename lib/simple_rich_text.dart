@@ -186,11 +186,11 @@ class SimpleRichText extends StatelessWidget {
               color: map.containsKey('color')
                   ? parseColor(map['color']!)
                   : style!.color,
-              decoration: set.contains('_')
-                  ? TextDecoration.underline
-                  : TextDecoration.none,
+              // decoration: set.contains('_')
+              //     ? TextDecoration.underline
+              //     : TextDecoration.none,
               fontStyle:
-                  set.contains('/') ? FontStyle.italic : FontStyle.normal,
+                  set.contains('_') ? FontStyle.italic : FontStyle.normal,
               fontWeight:
                   set.contains('*') ? FontWeight.bold : FontWeight.normal,
               fontSize: map.containsKey('fontSize')
@@ -323,25 +323,25 @@ class SimpleRichText extends StatelessWidget {
                 i++;
               }
             } else {
-              int adv = v.length;
-              if (v[0] == '{') {
-                log("link: $v");
-                int close = v.indexOf('}');
-                if (close > 0) {
-                  cmd = v.substring(1, close);
-                  log("AAA cmd=$cmd");
-                  v = v.substring(close + 1);
-                  log("remaining: $v");
-                }
-              }
-              wrap(v);
-              i += adv;
-              if (i < linesList[k].length) {
-                String m = linesList[k].substring(i, i + 1);
-                log("*** format: $m");
-                toggle(m);
-                i++;
-              }
+              // int adv = v.length;
+              // if (v[0] == '{') {
+              //   log("link: $v");
+              //   int close = v.indexOf('}');
+              //   if (close > 0) {
+              //     cmd = v.substring(1, close);
+              //     log("AAA cmd=$cmd");
+              //     v = v.substring(close + 1);
+              //     log("remaining: $v");
+              //   }
+              // }
+              // wrap(v);
+              // i += adv;
+              // if (i < linesList[k].length) {
+              //   String m = linesList[k].substring(i, i + 1);
+              //   log("*** format: $m");
+              //   toggle(m);
+              //   i++;
+              // }
             }
           }
 
