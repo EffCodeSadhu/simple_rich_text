@@ -323,6 +323,7 @@ class SimpleRichText extends StatelessWidget {
                 i++;
               }
             } else {
+              // COMMENTING THIS ENTIRE ELSE BLOCK IS STUPID. NEVER DO THAT IN YOUR LIFE EVER AGIAN.
               int adv = v.length;
               // if (v[0] == '{') {
               //   log("link: $v");
