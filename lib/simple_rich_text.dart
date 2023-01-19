@@ -323,7 +323,7 @@ class SimpleRichText extends StatelessWidget {
                 i++;
               }
             } else {
-              // int adv = v.length;
+              int adv = v.length;
               // if (v[0] == '{') {
               //   log("link: $v");
               //   int close = v.indexOf('}');
@@ -334,14 +334,14 @@ class SimpleRichText extends StatelessWidget {
               //     log("remaining: $v");
               //   }
               // }
-              // wrap(v);
-              // i += adv;
-              // if (i < linesList[k].length) {
-              //   String m = linesList[k].substring(i, i + 1);
-              //   log("*** format: $m");
-              //   toggle(m);
-              //   i++;
-              // }
+              wrap(v);
+              i += adv;
+              if (i < linesList[k].length) {
+                String m = linesList[k].substring(i, i + 1);
+                log("*** format: $m");
+                toggle(m);
+                i++;
+              }
             }
           }
 
